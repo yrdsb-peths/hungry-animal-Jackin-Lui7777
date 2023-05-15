@@ -14,17 +14,18 @@ public class Elephant extends Actor
      */
     public void act() 
     {
+        int speed = 2;
         if (Greenfoot.isKeyDown("w")) {
-            setLocation(getX(), getY() - 1);
+            setLocation(getX(), getY() - speed);
         }
         if (Greenfoot.isKeyDown("a")) {
-            setLocation(getX() - 1, getY());
+            setLocation(getX() - speed, getY());
         }
         if (Greenfoot.isKeyDown("s")) {
-            setLocation(getX(), getY() + 1);
+            setLocation(getX(), getY() + speed);
         }
         if (Greenfoot.isKeyDown("d")) {
-            setLocation(getX() + 1, getY());
+            setLocation(getX() + speed, getY());
         }
     }    
 }
