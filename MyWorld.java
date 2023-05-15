@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -22,6 +21,7 @@ public class MyWorld extends World
     }
     
     public void createApple() {
-        addObject(new Apple(), Greenfoot.getRandomNumber(getWidth()), 0);
+        Apple a = new Apple();
+        addObject(a, Greenfoot.getRandomNumber(getWidth()), 0);
     }
 }

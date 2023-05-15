@@ -12,10 +12,14 @@ public class Apple extends Actor
      * Act - do whatever the Apple wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    int speed = 2;
     public void act() 
-    {
-        int speed = 2;
+    {   
+        MyWorld world = (MyWorld) getWorld();
         setLocation(getX(), getY() + speed);
+        if (isTouching(Elephant.class)) {
+            world.removeObject(this);
+            world.createApple();
+        }
     }    
 }

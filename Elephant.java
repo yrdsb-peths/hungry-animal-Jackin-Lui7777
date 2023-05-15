@@ -12,9 +12,11 @@ public class Elephant extends Actor
      * Act - do whatever the Elephant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int speed = 15;
+    MyWorld world = (MyWorld) getWorld();
     public void act() 
     {
-        int speed = 2;
+
         if (Greenfoot.isKeyDown("w")) {
             setLocation(getX(), getY() - speed);
         }
@@ -27,5 +29,6 @@ public class Elephant extends Actor
         if (Greenfoot.isKeyDown("d")) {
             setLocation(getX() + speed, getY());
         }
-    }    
+
+    }   
 }
