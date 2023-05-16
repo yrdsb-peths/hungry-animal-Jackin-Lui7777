@@ -20,6 +20,10 @@ public class Apple extends Actor
         if (isTouching(Elephant.class)) {
             world.removeObject(this);
             world.createApple();
+            world.score += 1;
+            world.showText("Score: " + String.valueOf(world.score), 100, 25);
         }
-    }    
+    }
+    
+    
 }

@@ -12,7 +12,7 @@ public class Elephant extends Actor
      * Act - do whatever the Elephant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int speed = 40;
+    int speed = 3;
     
     public void act() 
     {

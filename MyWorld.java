@@ -12,7 +12,7 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    
+    public int score = 0;
     public Apple apple = new Apple();
     public MyWorld()
     {    
@@ -20,6 +20,7 @@ public class MyWorld extends World
         super(600, 400, 1);
         addObject(new Elephant(), 0, 0);
         addObject(apple, Greenfoot.getRandomNumber(getWidth()), 0);
+        showText("Score: " + String.valueOf(score), 100, 25);
     }
     
     public void createApple() {
@@ -48,4 +49,5 @@ public class MyWorld extends World
             return 0;
         }
     }
+    
 }
