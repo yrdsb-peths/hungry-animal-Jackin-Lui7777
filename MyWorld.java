@@ -27,7 +27,7 @@ public class MyWorld extends World
     public void createApple(int speed) {
         if (!gameOver) {
             Apple a = new Apple(speed);
-            addObject(a, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+            addObject(a, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()/2));
             this.apple = a;
         }
     }
