@@ -24,9 +24,9 @@ public class MyWorld extends World
         showText("Score: " + String.valueOf(score), 100, 25);
     }
     
-    public void createApple() {
+    public void createApple(int speed) {
         if (!gameOver) {
-            Apple a = new Apple();
+            Apple a = new Apple(speed);
             addObject(a, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
             this.apple = a;
         }

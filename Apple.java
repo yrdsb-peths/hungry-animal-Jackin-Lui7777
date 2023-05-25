@@ -13,6 +13,11 @@ public class Apple extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int speed = 2;
+    public Apple(int speed) {
+        this.speed = speed;
+    }
+    public Apple() {
+    }
     public void act() 
     {   
         MyWorld world = (MyWorld) getWorld();
@@ -22,7 +27,7 @@ public class Apple extends Actor
         }
         if (isTouching(Elephant.class)) {
             world.removeObject(this);
-            world.createApple();
+            world.createApple(speed);
             world.score += 1;
             world.showText("Score: " + String.valueOf(world.score), 100, 25);
         }
