@@ -14,6 +14,7 @@ public class MyWorld extends World
      */
     public int score = 0;
     public Apple apple = new Apple();
+    public boolean gameOver = false;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -24,9 +25,11 @@ public class MyWorld extends World
     }
     
     public void createApple() {
-        Apple a = new Apple();
-        addObject(a, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
-        this.apple = a;
+        if (!gameOver) {
+            Apple a = new Apple();
+            addObject(a, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+            this.apple = a;
+        }
     }
     
     public Apple getApple() {
@@ -48,6 +51,13 @@ public class MyWorld extends World
         catch(Exception e) {
             return 0;
         }
+    }
+    
+    public void lose() {
+        GameOver gameOver = new GameOver();
+        Greenfoot.setWorld(gameOver);
+        gameOver.showText("Game Over!", getWidth()/2, getHeight()/2);
+        gameOver.showText("Score: " + String.valueOf(score), 100, 25);
     }
     
 }

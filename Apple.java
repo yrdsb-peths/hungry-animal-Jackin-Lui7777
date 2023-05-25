@@ -17,6 +17,9 @@ public class Apple extends Actor
     {   
         MyWorld world = (MyWorld) getWorld();
         setLocation(getX(), getY() + speed);
+        if (getY() >= world.getHeight() - 1) {
+            world.lose();
+        }
         if (isTouching(Elephant.class)) {
             world.removeObject(this);
             world.createApple();
