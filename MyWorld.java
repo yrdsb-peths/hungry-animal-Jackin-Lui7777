@@ -57,6 +57,7 @@ public class MyWorld extends World
         GameOver gameOver = new GameOver();
         Greenfoot.setWorld(gameOver);
         gameOver.showText("Game Over!", getWidth()/2, getHeight()/2);
+        gameOver.showText("Press space to return to menu!", getWidth()/2, getHeight()/2 + 50);
         gameOver.showText("Score: " + String.valueOf(score), 100, 25);
     }
     
