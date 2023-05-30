@@ -13,7 +13,7 @@ public class Elephant extends Actor
      * Act - do whatever the Elephant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int speed = 15;
+    int speed = 8;
     boolean teleport = false;
     GreenfootSound sound = new GreenfootSound("sounds/elephantcub.mp3");
     public boolean facingRight = true;
