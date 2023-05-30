@@ -15,10 +15,12 @@ public class MyWorld extends World
     public int score = 0;
     public Apple apple = new Apple();
     public boolean gameOver = false;
+    public static GreenfootImage background = new GreenfootImage("images/background.jpg");
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
+        setBackground(background);
         addObject(new Elephant(), 0, 0);
         addObject(apple, Greenfoot.getRandomNumber(getWidth()), 0);
         showText("Score: " + String.valueOf(score), 100, 25);
